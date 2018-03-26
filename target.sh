@@ -29,6 +29,6 @@ read -i $SOURCE -e SOURCE
 for i in {1..30}; do echo "sending scan $i" && sudo hping3 --scan all --spoof $SOURCE -S $TARGET 2>/dev/null 1>/dev/null; done
 fi
 exit 0
-}
+
  
  
