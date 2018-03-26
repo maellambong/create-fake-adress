@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 #set the prompt to show you are in pentmenu and not standard shell
 PS3="Pentmenu>"
 
@@ -13,7 +13,7 @@ mainmenu=("DOS")
 select opt in "${mainmenu[@]}"; do
 if [ "$opt" = "DOS" ]; then
 distractionscan
-
+fi
 #####################
 ##START DISTRACTION##
 distractionscan()
@@ -27,8 +27,7 @@ echo "Enter spoofed source address:"
 read -i $SOURCE -e SOURCE
 #use hping to perform multiple obvious TCP SYN scans
 for i in {1..30}; do echo "sending scan $i" && sudo hping3 --scan all --spoof $SOURCE -S $TARGET 2>/dev/null 1>/dev/null; done
-fi
 exit 0
-
+}
  
  
