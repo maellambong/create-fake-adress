@@ -17,9 +17,8 @@ select opt in "${mainmenu[@]}"; do
 	elif [ "$opt" = "DOS" ]; then
 distractionscan
 	else
-#if no valid option is chosen, chastise the user
-	echo "That's not a valid option! Hit Return to show main menu"
-	fi
+   exit
+   fi
 done
 }
 
