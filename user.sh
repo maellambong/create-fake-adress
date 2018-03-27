@@ -9,12 +9,12 @@ mainmenu()
 {
 #build a main menu using bash select
 #from here, the various sub menus can be selected and from them, modules can be run
-mainmenu=("DOS" "Quit")
+mainmenu=("Fake_ip" "Quit")
 select opt in "${mainmenu[@]}"; do
 	if [ "$opt" = "Quit" ]; then
 	echo "Quitting...Thank you for using pentmenu!" && sleep 1 && clear
 	exit 0
-	elif [ "$opt" = "DOS" ]; then
+	elif [ "$opt" = "Fake_ip" ]; then
 distractionscan
 	else
    exit
